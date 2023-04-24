@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    background-image: url("../assets/Julies-Beauty-Salon-Hero-1-1-1.jpg") ;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+        
+
+    &-navbar{
+        &-container{
+            display: flex;
+            flex-direction: row;
+            background-color: #000;
+            height: 70px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 25px;  
+            color: white;
+
+            &-logo{
+                font-size: 28px;            
+            }
+
+            &-hamburger{
+                width: 50px;
+                height: 50px;
+                position: relative;
+                cursor: pointer;
+                background-color: white;
+                border: none;
+                z-index: 2;
+                .ham{
+                    &::after{
+                        content: "";
+                        border: 1px solid black;
+                        width: 30px;
+                        position: absolute;
+                        right: 10px;
+                        top: 35px;
+                    }
+
+                    &:nth-child(1){
+                        &::after{
+                            top: 25px;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        &::after {
+                            top: 15px;
+                        }
+                    }
+
+                    
+                }
+
+                &.active {
+                    .ham{
+                        &:nth-child(1) {
+                                &::after {
+                                    top: 25px;
+                                    transform: rotate(-45deg);
+                                    transition: all 0.5s ease-in-out;
+                                }
+                            }
+                        
+                            &:nth-child(2) {
+                                &::after {
+                                    opacity: 0;
+                                }
+                            }
+                        
+                            &:nth-child(3) {
+                                &::after {
+                                    top: 25px;
+                                    transform: rotate(45deg);
+                                    transition: all 0.5s ease-in-out;
+                                }
+                            }
+                    }
+                }
+
+            }
+
+            &-menu{
+                    z-index: 1;
+                    min-width: 30%;
+                    min-height: 100%;
+                    position: fixed;
+                    top: 0;
+                    height: 0;
+                    right: 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    text-align: center;
+                    padding-top: 20px;
+                    transition: all 0.3s ease-in-out;
+                    
+
+                    ul{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        flex-direction: column;
+                        height: 100%;
+                        
+                            li{
+                                list-style: none;
+                                padding:30px;
+                                font-size: 30px;
+                                
+                                display: flex;
+
+                                a{
+                                    text-decoration: none;
+                                    color: white;
+
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                    }
+
+                    &.list{
+                        visibility: visible;
+                        opacity: 1;
+                        background: rgba(0, 0, 0, 0.5);
+                    }
+            }
+        }
+    }
+
+    
+    &-text {
+        &-container {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            font-size: 32px;
+        }
+    }
+    
+}
+
+
+
+
+// let hamburger=document.querySelector(".header-navbar-container-hamburger");
+// // let ham = document.querySelector(".ham");
+// const active=null;
+
+// hamburger.addEventListener("click", function () {
+//         this.classList.toggle("active");
+//         let childern=this.children;
+//         console.log(childern);
+
+//         childern.forEach((x)=> x.classList.toggle("close"));
+//     });

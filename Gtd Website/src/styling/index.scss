@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#home {
+    height: 100vh; 
+    .hero {
+        &-navbar {
+            display: flex;
+            background-color: #454545;
+            width: 100%;
+            height: 30px;
+            position: fixed;
+            top: 0px;
+
+            &-logo {
+                color: #fff;
+                align-self: center;
+                position: absolute;
+                left: 30%;
+                width: 20px;
+                height: 13px;
+
+
+            }
+        }
+
+        &-banner{
+            &-container {
+                 display: flex;
+                 flex-direction: column;
+                 align-items: center;
+                 justify-content: center;
+                 text-align: center;
+
+                &-image {
+                    width: 100%;
+                    max-height: calc(50vh - 30px);
+
+                }
+
+                &-text {
+                    position: absolute;
+                    font-size: 100px;
+                    color: #454545;
+
+                    @media screen and (max-width:1024px) {
+                        font-size: 40px;
+                    }
+
+                    @media screen and (max-width:768px) {
+                        font-size: 22px;
+                    }
+
+                }
+           }
+        }
+    }
+
+    
+
+
+    .content-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        position: relative;
+
+        &-image{
+            flex-direction: row;
+
+            &-one,
+            &-two,
+            &-three {
+                width: 240px;
+                height: 190px;
+                padding: 0 30px;
+                position: absolute;
+                top: -22%;
+            }
+
+            .image-one {
+                left: 30%
+            }
+
+            .image-two {
+                left: 44%
+            }
+
+            .image-three {
+                left: 58%
+            }
+
+            @media screen and (max-width:1440px) {
+                display: block;
+                text-align: center;
+
+                &-one,
+                &-two,
+                &-three {
+                    width: 220px;
+                    height: 170px;
+                    margin-top: 45px;
+                    position: relative;
+                    top: 0;
+                    left: 0 !important;
+                    align-self: center;
+                    z-index: -1;
+                }
+            }
+        }
+
+        &-text {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            &-title {
+                font-size: 64px;
+                color: #FFC300;
+                margin-top: 16%;
+
+                @media screen and (max-width:1440px) {
+                    font-size: 50px;
+                    padding: 20px;
+                    margin-top: 0;
+                }
+            }
+
+            &-content {
+                font-size: 20px;
+                margin: 5% auto 5% auto;
+                max-width: 760px;
+
+                @media screen and (max-width:1024px) {
+                    margin: 5% 5%;
+                }
+            }
+
+        }
+    }
+
+    .footer {
+        background-color: #454545;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10%;
+        position: relative;
+        border-top: 10px solid #FFC300;
+
+        @media screen and (max-width:1024px) {
+            padding: 0 20px;
+            gap: 0;
+            justify-content: space-evenly;
+        }
+
+        &-team,
+        &-learn-more,
+        &-meet-us,
+        &-contact {
+            h3 {
+                color: #FFC300;
+                font-size: 20px;
+                margin-top: 15px;
+                text-align: center;
+            }
+
+            &-content {
+                p {
+                    color: #fff;
+                    font-size: 14px;
+                    margin: 10px 0;
+                    text-align: center;
+                }
+
+            }
+
+        }
+
+        @media screen and (max-width:768px) {
+            p {
+                padding: 10px 0;
+            }
+        }
+
+        @media screen and (max-width:336px) {
+            &-team,
+            &-contact {
+                &-content {
+                    margin-top: 34px;
+                }
+            }
+        }
+
+    }
+}

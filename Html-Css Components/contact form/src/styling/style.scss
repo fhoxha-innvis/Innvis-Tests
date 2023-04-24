@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#contact-from{
+    background-image: url("../assets/beautiful-shot-forest.jpg");
+    background-color: #424949;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    .container{
+        text-align: center;
+        width: 100%;
+        max-width: 50%;
+
+        .title {
+            font-size: 24px;
+            position: relative;
+            padding-bottom: 40px;
+            color: white;
+            
+                &::after {
+                            content: "";
+                            border: 1px solid #21618C;
+                            width: 100px;
+                            height: 9px;
+                            top:90%;
+                            left:45%;
+                            position: absolute;
+                            background-color: #21618C;
+
+                            @media screen and (max-width: 375px){
+                                top: 80%;
+                                left: 15%;
+                            }
+                }
+        }
+        .contact-from-container{
+
+            .success-message{
+                color: green;
+                visibility: hidden;
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 30px;
+            }
+            .form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                
+                .form-input{
+                    width: 100%;
+                    background-color: black;
+                    color: white;
+                    margin: 5px;
+                    padding-left: 30px;
+                    border: none;
+
+                    &:last-child{
+                        padding-top: 15px;
+                    }
+                }
+                
+            
+                input[type="text"],
+                input[type="email"] {
+                     height: 3rem;
+
+                    &:focus{
+                        box-shadow: 0 0 5pt 0.5pt #21618C;
+                        outline-width: 0px;
+                    }
+                }
+                textarea{
+                    height: 6.6rem;
+                    &:focus {
+                            box-shadow: 0 0 5pt 2pt #21618C;
+                            outline-width: 0px;
+                        }
+                }
+            }
+        }
+
+        .button-container{
+            button{
+                margin-top: 20px;
+                background-color: #21618C;
+                color: white;
+                border: none;
+                padding:10px 40px;
+                border-radius: 30px;
+                float: right;
+                cursor: pointer;
+            }
+        }
+    }
+}

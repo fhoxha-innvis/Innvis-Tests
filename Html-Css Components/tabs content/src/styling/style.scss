@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.tabs-container{
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    font-size: 18px;
+    background-color: lightgreen;
+    max-width: 50%;
+    width: 100%;
+    padding: 20px 0 20px 30px;
+
+    &-title{
+        display: flex;
+        flex-direction: row;
+        button{
+           margin: 10px 2px;
+           padding: 5px 15px;
+           background-color: gray;
+           color: lightgreen;
+           border: none;
+           border-radius: 3px;
+           color: white;
+           cursor: pointer;
+        }
+
+        .is__active{
+            background-color: green;
+            color: white;
+            
+        }
+    }
+
+    &-content{
+        &-body{
+            display: none;
+
+            &.is__active {
+                    display: block;
+            }
+
+            h5{
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+}

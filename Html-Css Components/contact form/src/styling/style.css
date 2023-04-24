@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#contact-from {
+  background-image: url("../assets/beautiful-shot-forest.jpg");
+  background-color: #424949;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+#contact-from .container {
+  text-align: center;
+  width: 100%;
+  max-width: 50%;
+}
+#contact-from .container .title {
+  font-size: 24px;
+  position: relative;
+  padding-bottom: 40px;
+  color: white;
+}
+#contact-from .container .title::after {
+  content: "";
+  border: 1px solid #21618C;
+  width: 100px;
+  height: 9px;
+  top: 90%;
+  left: 45%;
+  position: absolute;
+  background-color: #21618C;
+}
+@media screen and (max-width: 375px) {
+  #contact-from .container .title::after {
+    top: 80%;
+    left: 15%;
+  }
+}
+#contact-from .container .contact-from-container .success-message {
+  color: green;
+  visibility: hidden;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+#contact-from .container .contact-from-container .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#contact-from .container .contact-from-container .form .form-input {
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin: 5px;
+  padding-left: 30px;
+  border: none;
+}
+#contact-from .container .contact-from-container .form .form-input:last-child {
+  padding-top: 15px;
+}
+#contact-from .container .contact-from-container .form input[type=text],
+#contact-from .container .contact-from-container .form input[type=email] {
+  height: 3rem;
+}
+#contact-from .container .contact-from-container .form input[type=text]:focus,
+#contact-from .container .contact-from-container .form input[type=email]:focus {
+  box-shadow: 0 0 5pt 0.5pt #21618C;
+  outline-width: 0px;
+}
+#contact-from .container .contact-from-container .form textarea {
+  height: 6.6rem;
+}
+#contact-from .container .contact-from-container .form textarea:focus {
+  box-shadow: 0 0 5pt 2pt #21618C;
+  outline-width: 0px;
+}
+#contact-from .container .button-container button {
+  margin-top: 20px;
+  background-color: #21618C;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 30px;
+  float: right;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
